@@ -3,18 +3,23 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title></title>
+  <title>LeetCode 70. Climbing Stairs C语言 | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Venom,Venom's Blog">
   
-  <meta property="og:type" content="website">
-<meta property="og:title">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="题目描述You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note: Given n will be a positi">
+<meta name="keywords" content="博客,每个LeetCode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode 70. Climbing Stairs C语言">
+<meta property="og:url" content="http://yoursite.com/2018/11/30/LeetCode70/index.html">
 <meta property="og:site_name">
+<meta property="og:description" content="题目描述You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note: Given n will be a positi">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-30T07:49:08.230Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title">
+<meta name="twitter:title" content="LeetCode 70. Climbing Stairs C语言">
+<meta name="twitter:description" content="题目描述You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note: Given n will be a positi">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -105,112 +110,154 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-LeetCode70" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/01/hello-world/">MiHo-主题安装和配置详情</a>
+    <h1 class="post-title" itemprop="name">
+      LeetCode 70. Climbing Stairs C语言
     </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2018-11-30
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
   
 
           
-              <span class="header-cate">
-                <i class="fa fa-map-marker"></i>
-                  
-                  <a href="/categories/开源项目/">开源项目</a>
-                  
-              </span>
-          
       </header>
     
-    <div class="article-entry " itemprop="articleBody">
+    <div class="article-entry post-content" itemprop="articleBody">
       
-        <div class="article-img">
-            <a href="/2017/08/01/hello-world/">
-                
-                <img src="http://oerolc7og.bkt.clouddn.com/images/miho/theme/github-second.jpg" alt="MiHo-主题安装和配置详情" title="MiHo-主题安装和配置详情">
+            
+            <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>You are climbing a stair case. It takes n steps to reach to the top.</p>
+<p>Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?</p>
+<p>Note: Given n will be a positive integer.</p>
+<p>Example 1:</p>
+<p>Input: 2<br>Output: 2<br>Explanation: There are two ways to climb to the top.</p>
+<ol>
+<li>1 step + 1 step</li>
+<li>2 steps<br>Example 2:</li>
+</ol>
+<p>Input: 3<br>Output: 3<br>Explanation: There are three ways to climb to the top.</p>
+<ol>
+<li>1 step + 1 step + 1 step</li>
+<li>1 step + 2 steps</li>
+<li>2 steps + 1 step<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int climbStairs(int n) &#123;</span><br><span class="line">    int step = 0;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;=1) <span class="built_in">return</span> 1;</span><br><span class="line">    int one=1;</span><br><span class="line">    int two=1;</span><br><span class="line">    int res=0;</span><br><span class="line">    <span class="keyword">for</span>(int i=2;i&lt;=n;i++)&#123;</span><br><span class="line">        res = one + two;</span><br><span class="line">        two = one;</span><br><span class="line">        one = res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2018年11月30日 15:49</p>
+        <p>原始链接： <a class="post-url" href="/2018/11/30/LeetCode70/" title="LeetCode 70. Climbing Stairs C语言">http://yoursite.com/2018/11/30/LeetCode70/</a></p>
+        <footer>
+            <a href="http://yoursite.com">
+                <img src="/images/logo.png" alt="">
                 
             </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                
-一. 主题简介&emsp;&emsp;MiHo 是一款单栏响应式的Hexo主题；基于 Hexo 3.0+ 制作，兼容移动端浏览；主题的代码托管在GitHub上，欢迎Star和Fork；如遇到问题或发表建议，可以提Issues，也可以在博客中留言给我，另外,喜欢的话不妨给个 Star。
-二. 安装2.1 安装主题1$ git clone https://github.co...
-            </p>
-        </div>
+        </footer>
+    </div>
+</div>
+
       
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
         
     </div>
     <footer class="article-footer">
         
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2017-08-01</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/博客/" class="color3">博客</a>
-      
-    <a href="/tags/开源项目/" class="color5">开源项目</a>
-      
-  </li>
-
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/30/LeetCode70/&title=《LeetCode 70. Climbing Stairs C语言》 — null&pic=http://yoursite.comimages/logo.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/30/LeetCode70/&title=《LeetCode 70. Climbing Stairs C语言》 — null&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/30/LeetCode70/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《LeetCode 70. Climbing Stairs C语言》 — null&url=http://yoursite.com/2018/11/30/LeetCode70/&via=http://yoursite.com" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/30/LeetCode70/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
         </ul>
-        
-            <a href="/2017/08/01/hello-world/#more" class="article-more-link">more&gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/11/30/LeetCode70/" alt="微信分享二维码">
+</div>
 
+<div class="mask"></div>
 
-  
-    <article id="post-LeetCode70" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/30/LeetCode70/">LeetCode 70. Climbing Stairs C语言</a>
-    </h1>
-  
-
-          
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2018/11/30/LeetCode70/">
-                
-                <img src="http://yoursite.com/images/banner.jpg" alt="LeetCode 70. Climbing Stairs C语言" title="LeetCode 70. Climbing Stairs C语言">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                题目描述You are climbing a stair case. It takes n steps to reach to the top.
-Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
-Note: Given n wil...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
         
         <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2018-11-30</li>
             
             
   <li class="article-footer-tags">
@@ -224,15 +271,31 @@ Note: Given n wil...
 
         </ul>
         
-            <a href="/2018/11/30/LeetCode70/#more" class="article-more-link">more&gt;&gt;</a>
-        
     </footer>
   </div>
 </article>
 
 
-  
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#题目描述"><span class="post-toc-text">题目描述</span></a></li></ol>
+        </nav>
+    </aside>
+    
 
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">MiHo-主题安装和配置详情</span>
+      <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+    </a>
+  
+</nav>
+
+
+
+    
 </section>
         
       </div>
@@ -264,7 +327,7 @@ Note: Given n wil...
   var mihoConfig = {
       root: "http://yoursite.com",
       animate: true,
-      isHome: true,
+      isHome: false,
       share: true,
       reward: 1
   }
@@ -366,6 +429,11 @@ Note: Given n wil...
   <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
   <script src="/js/animate.js"></script>
 
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
 
   </div>
 </body>
