@@ -3,23 +3,23 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>LeetCode 70. Climbing Stairs C语言 | </title>
+  <title>LeetCode 67. Add Binary C++ | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="Venom,Venom's Blog">
   
-  <meta name="description" content="题目描述You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note: Given n will be a positi">
+  <meta name="description" content="题目描述Given two binary strings, return their sum (also a binary string). The input strings are both non-empty and contains only characters 1 or 0. Example 1: Input: a = “11”, b = “1”Output: “100”Example">
 <meta name="keywords" content="博客,每日LeetCode">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode 70. Climbing Stairs C语言">
-<meta property="og:url" content="http://yoursite.com/2018/11/30/LeetCode70/index.html">
+<meta property="og:title" content="LeetCode 67. Add Binary C++">
+<meta property="og:url" content="http://yoursite.com/2018/11/30/LeetCode67/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="题目描述You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note: Given n will be a positi">
+<meta property="og:description" content="题目描述Given two binary strings, return their sum (also a binary string). The input strings are both non-empty and contains only characters 1 or 0. Example 1: Input: a = “11”, b = “1”Output: “100”Example">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-11-30T07:54:59.852Z">
+<meta property="og:updated_time" content="2018-11-30T07:54:44.675Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode 70. Climbing Stairs C语言">
-<meta name="twitter:description" content="题目描述You are climbing a stair case. It takes n steps to reach to the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top? Note: Given n will be a positi">
+<meta name="twitter:title" content="LeetCode 67. Add Binary C++">
+<meta name="twitter:description" content="题目描述Given two binary strings, return their sum (also a binary string). The input strings are both non-empty and contains only characters 1 or 0. Example 1: Input: a = “11”, b = “1”Output: “100”Example">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -110,17 +110,24 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-LeetCode70" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-LeetCode67" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      LeetCode 70. Climbing Stairs C语言
+      LeetCode 67. Add Binary C++
     </h1>
     <div class="post-title-bar">
       <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/开源项目/">开源项目</a>
+                  
+              </li>
           
         <li>
           <i class="fa fa-calendar"></i>  2018-11-30
@@ -139,27 +146,18 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>You are climbing a stair case. It takes n steps to reach to the top.</p>
-<p>Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?</p>
-<p>Note: Given n will be a positive integer.</p>
+            <h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>Given two binary strings, return their sum (also a binary string).</p>
+<p>The input strings are both non-empty and contains only characters 1 or 0.</p>
 <p>Example 1:</p>
-<p>Input: 2<br>Output: 2<br>Explanation: There are two ways to climb to the top.</p>
-<ol>
-<li>1 step + 1 step</li>
-<li>2 steps<br>Example 2:</li>
-</ol>
-<p>Input: 3<br>Output: 3<br>Explanation: There are three ways to climb to the top.</p>
-<ol>
-<li>1 step + 1 step + 1 step</li>
-<li>1 step + 2 steps</li>
-<li>2 steps + 1 step<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int climbStairs(int n) &#123;</span><br><span class="line">    int step = 0;</span><br><span class="line">    <span class="keyword">if</span>(n&lt;=1) <span class="built_in">return</span> 1;</span><br><span class="line">    int one=1;</span><br><span class="line">    int two=1;</span><br><span class="line">    int res=0;</span><br><span class="line">    <span class="keyword">for</span>(int i=2;i&lt;=n;i++)&#123;</span><br><span class="line">        res = one + two;</span><br><span class="line">        two = one;</span><br><span class="line">        one = res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+<p>Input: a = “11”, b = “1”<br>Output: “100”<br>Example 2:</p>
+<p>Input: a = “1010”, b = “1011”<br>Output: “10101”<br>意思就是二进制相加。</p>
+<p>我的思路：因为在二进制中1+1=0；1+0=1；所以我就设置一个进位符标志，分别对a 和b进行遍历，从最后一位开始相加，如果是相加得到0；那么我就设置一个flag=1；表示向前进一位，然后我的sum是记录每次相加的和。每次相加转成字符串，最后就可以直接输出。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">public:</span><br><span class="line">    string addBinary(string a, string b) &#123;</span><br><span class="line">        string sum = <span class="string">""</span>;</span><br><span class="line">        int flag = 0; //设置进位符</span><br><span class="line">        int i = a.length()-1;</span><br><span class="line">        int j = b.length() - 1;</span><br><span class="line">        <span class="keyword">while</span>(flag==1 || i&gt;=0 || j&gt;=0)&#123;</span><br><span class="line">            <span class="keyword">if</span>(i&gt;=0)&#123;</span><br><span class="line">                flag = flag + a[i--] - <span class="string">'0'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(j&gt;=0)&#123;</span><br><span class="line">                flag = flag + b[j--] - <span class="string">'0'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            sum = char(flag%2+<span class="string">'0'</span>) + sum;</span><br><span class="line">            flag = flag/2;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> sum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
             <div class="post-copyright">
     <div class="content">
         <p>最后更新： 2018年11月30日 15:54</p>
-        <p>原始链接： <a class="post-url" href="/2018/11/30/LeetCode70/" title="LeetCode 70. Climbing Stairs C语言">http://yoursite.com/2018/11/30/LeetCode70/</a></p>
+        <p>原始链接： <a class="post-url" href="/2018/11/30/LeetCode67/" title="LeetCode 67. Add Binary C++">http://yoursite.com/2018/11/30/LeetCode67/</a></p>
         <footer>
             <a href="http://yoursite.com">
                 <img src="/images/logo.png" alt="">
@@ -216,7 +214,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/30/LeetCode70/&title=《LeetCode 70. Climbing Stairs C语言》 — null&pic=http://yoursite.comimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/11/30/LeetCode67/&title=《LeetCode 67. Add Binary C++》 — null&pic=http://oerolc7og.bkt.clouddn.com/images/miho/theme/github-second.jpg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -226,22 +224,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/30/LeetCode70/&title=《LeetCode 70. Climbing Stairs C语言》 — null&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/11/30/LeetCode67/&title=《LeetCode 67. Add Binary C++》 — null&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/30/LeetCode70/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2018/11/30/LeetCode67/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《LeetCode 70. Climbing Stairs C语言》 — null&url=http://yoursite.com/2018/11/30/LeetCode70/&via=http://yoursite.com" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《LeetCode 67. Add Binary C++》 — null&url=http://yoursite.com/2018/11/30/LeetCode67/&via=http://yoursite.com" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/30/LeetCode70/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://yoursite.com/2018/11/30/LeetCode67/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -251,7 +249,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/11/30/LeetCode70/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://yoursite.com/2018/11/30/LeetCode67/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -285,19 +283,9 @@
 
 <nav id="article-nav">
   
-    <a href="/2018/11/30/LeetCode67/" id="article-nav-newer" class="article-nav-link-wrap">
-
-      <span class="article-nav-title">
-        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-        
-          LeetCode 67. Add Binary C++
-        
-      </span>
-    </a>
   
-  
-    <a href="/2017/08/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <span class="article-nav-title">MiHo-主题安装和配置详情</span>
+    <a href="/2018/11/30/LeetCode70/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">LeetCode 70. Climbing Stairs C语言</span>
       <i class="fa fa-hand-o-right" aria-hidden="true"></i>
     </a>
   
